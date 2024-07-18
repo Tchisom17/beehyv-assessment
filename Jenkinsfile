@@ -12,24 +12,24 @@ pipeline {
         stage('Build') {
             steps {
                 // Example build step, replace with your build commands
-                sh 'echo "Building..."'
-                // For a Maven project, you might use: sh 'mvn clean install'
+                bat 'echo Building...'
+                // For Go project, you might use: bat 'go build -o yourproject.exe'
             }
         }
 
         stage('Test') {
             steps {
                 // Example test step, replace with your test commands
-                sh 'echo "Running tests..."'
-                // For a Maven project, you might use: sh 'mvn test'
+                bat 'echo Running tests...'
+                // For Go project, you might use: bat 'go test ./...'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Example deploy step, replace with your deploy commands
-                sh 'echo "Deploying..."'
-                // For deployment, you might copy files, upload artifacts, etc.
+                bat 'echo Deploying...'
+                // Add actual deployment steps here
             }
         }
     }
